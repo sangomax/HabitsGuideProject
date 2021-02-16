@@ -440,16 +440,16 @@ class HomeCollectionViewController: UICollectionViewController {
                 leaderboardSection.boundarySupplementaryItems = [header]
                 leaderboardSection.decorationItems = [background]
                 
-//                                leaderboardSection.interGroupSpacing = 20
-//                                leaderboardSection.contentInsets =
-//                                    NSDirectionalEdgeInsets(top: 20, leading: 0,
-//                                                            bottom: 0, trailing: 0)
+                                leaderboardSection.interGroupSpacing = 20
+                                leaderboardSection.contentInsets =
+                                    NSDirectionalEdgeInsets(top: 20, leading: 0,
+                                                            bottom: 0, trailing: 0)
                 
                                 leaderboardSection.orthogonalScrollingBehavior =
                                     .groupPagingCentered
-//                                leaderboardSection.contentInsets =
-//                                    NSDirectionalEdgeInsets(top: 12, leading: 0,
-//                                                            bottom: 20, trailing: 0)
+                                leaderboardSection.contentInsets =
+                                    NSDirectionalEdgeInsets(top: 12, leading: 0,
+                                                            bottom: 20, trailing: 0)
                 
                 return leaderboardSection
                 

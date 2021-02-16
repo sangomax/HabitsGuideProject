@@ -73,14 +73,6 @@ extension APIRequest where Response: Decodable {
     }
 }
 
-extension APIRequest {
-    func send(completion: @escaping (Error?) -> Void) {
-        URLSession.shared.dataTask(with: request) { (_, _, error) in
-            completion(error)
-        }.resume()
-    }
-}
-
 enum ImageRequestError: Error {
     case couldNotInitializeFromData
 }
@@ -98,6 +90,14 @@ extension APIRequest where Response == UIImage {
                 completion(.failure(ImageRequestError
                    .couldNotInitializeFromData))
             }
+        }.resume()
+    }
+}
+
+extension APIRequest {
+    func send(completion: @escaping (Error?) -> Void) {
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            completion(error)
         }.resume()
     }
 }
